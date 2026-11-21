@@ -2,6 +2,8 @@
 
 ## AWS City 32 workshop progress
 
+The [interactive dashboard source](dashboard/) covers every module, including code walkthroughs, practice scenarios, and verified results. To use the dashboard locally, run `python3 -m http.server --directory dashboard 8000` from the repository root and open [the local dashboard](http://localhost:8000/).
+
 The sandbox copy is at `/workshop/AWS_City32`. The checks used Strands Agents 1.65.0 and Amazon Nova Pro in `us-east-1`.
 
 | Module | Result |

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore seven AWS City32 workshop modules, inspect the code, and review what passed in the sandbox.">
+  <meta name="theme-color" content="#142235">
+  <title>AWS City32 · Workshop dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="modules.js" defer></script>
+  <script src="dashboard.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#module-panel">Skip to module details</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="wordmark" href="#module-3" aria-label="AWS City32 dashboard">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>AWS <strong>City32</strong></span>
+      </a>
+      <a class="repository-link" href="https://github.com/diegoanahuac/AWS_11-21">GitHub repository</a>
+    </div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      <nav aria-label="Workshop modules">
+        <h2>Workshop modules</h2>
+        <div class="module-list" id="module-navigation"></div>
+        <div class="module-picker"><select id="module-picker" aria-label="Choose a workshop module"></select></div>
+      </nav>
+      <a class="workshop-link" href="https://catalog.us-east-1.prod.workshops.aws/workshops/083b80d7-5a90-402b-9bb4-19fb53092808/es-US">
+        <span>Workshop guide</span>
+        <small>AWS Workshop Studio · Español</small>
+      </a>
+    </aside>
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">AWS STUDENT COMMUNITY DAY <span aria-hidden="true">·</span> MÉRIDA</p>
+          <h1 id="page-title">Workshop dashboard</h1>
+          <p>Explore the Strands Agents customer service project, from the first tool call to AWS deployment.</p>
+        </div>
+        <div class="progress-card">
+          <div class="progress-head"><h2>Workshop progress</h2><span>7 modules</span></div>
+          <div class="progress-segments" id="progress-segments"></div>
+          <ul class="progress-legend">
+            <li><span class="legend-dot verified"></span><strong>4</strong> Sandbox verified</li>
+            <li><span class="legend-dot local"></span><strong>1</strong> Local pass</li>
+            <li><span class="legend-dot pending"></span><strong>2</strong> Optional pending</li>
+          </ul>
+        </div>
+      </section>
+      <noscript><p>Enable JavaScript to switch modules and try the examples. All notebooks are available in the GitHub repository.</p></noscript>
+      <section class="lesson" id="module-panel" tabindex="-1" aria-labelledby="module-title">
+        <div class="lesson-header">
+          <div>
+            <p class="eyebrow module-kicker" id="module-kicker"></p>
+            <h2 id="module-title"></h2>
+            <p class="module-summary" id="module-summary"></p>
+          </div>
+          <span class="tag" id="module-status"></span>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Module sections">
+          <button type="button" role="tab" id="tab-overview" data-view="overview" aria-controls="tab-content">Overview</button>
+          <button type="button" role="tab" id="tab-code" data-view="code" aria-controls="tab-content">Code</button>
+          <button type="button" role="tab" id="tab-verification" data-view="verification" aria-controls="tab-content">Verification</button>
+        </div>
+        <div id="tab-content" role="tabpanel" tabindex="0"></div>
+      </section>
+      <nav class="pager" id="module-pager" aria-label="Adjacent modules"></nav>
+    </main>
+  </div>
+</body>
+</html>
