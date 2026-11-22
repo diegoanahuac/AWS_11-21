@@ -154,3 +154,14 @@ pre { margin: 0; padding: 0.95rem 1rem; overflow: auto; color: #d8f5ec; font: 0.
   #tab-content { min-height: auto; }
   .pager a { font-size: 0.84rem; }
 }
+
+.topbar-actions { display: flex; align-items: center; justify-content: flex-end; gap: 0.34rem; }
+.topbar-link { color: #e6edf4; text-decoration: none; padding: 0.52rem 0.68rem; border-radius: 7px; font-size: 0.875rem; font-weight: 670; white-space: nowrap; }
+.topbar-link:hover { background: #2b4055; }
+.topbar-talk { color: #9cebd2; }
+.topbar-link[aria-current="page"] { background: #25443f; color: #b4f6df; }
+@media (max-width: 470px) {
+  .topbar-inner { gap: 0.35rem; flex-wrap: wrap; }
+  .topbar-actions { gap: 0.12rem; }
+  .topbar-link, .repository-link { padding: 0.44rem 0.39rem; font-size: 0.81rem; }
+}
